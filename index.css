@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #ffffff;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-mono-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.38) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  color: #ffffff;
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.18) !important;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: none;
+  color: #ffffff;
+}
+
+.glass-card-subtle {
+  background: rgba(15, 23, 42, 0.12) !important;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: none;
+  color: #ffffff;
+}
+
+/* Light panel used by the Resume/CV section (dark text) */
+.glass-light {
+  background: rgba(255, 255, 255, 0.82) !important;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #1c1917;
+}
+
+/* Burgundy keyword highlight on dark panels */
+.hl {
+  background: #800020;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.05em 0.4em;
+  border-radius: 0.3em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+@media print {
+  header, footer, #story, #projects, #game, #contact, button, nav, .fixed {
+    display: none !important;
+  }
+  #resume {
+    background: transparent !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    color: #1c1917 !important;
+  }
+  #resume * {
+    color: #1c1917 !important;
+  }
+}
